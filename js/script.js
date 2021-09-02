@@ -22,7 +22,9 @@ function numeroRandom(min, max) {
 
 //Chiedere all'utente di inserire la difficolta di cui sarà composto il campo da gioco.
 
-var sceltaUtente = prompt("Scegli la difficoltá: Facile (100 celle / 16 bombe), Medio (80 celle / 16 bombe), Difficile (50 celle / 16 bombe).");
+var sceltaUtenteMOD = prompt("Scegli la difficoltá: Facile (100 celle / 16 bombe), Medio (80 celle / 16 bombe), Difficile (50 celle / 16 bombe).");
+
+sceltaUtente = sceltaUtenteMOD.toLowerCase();
 
 while(sceltaUtente != "facile" && sceltaUtente != "medio" && sceltaUtente != "difficile") {
     sceltaUtente = prompt("ERRORE! Non hai inserito i termini giusti. Scegli la difficoltá: Facile (100 celle / 16 bombe), Medio (80 celle / 16 bombe), Difficile (50 celle / 16 bombe).");
