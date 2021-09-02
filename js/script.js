@@ -3,6 +3,9 @@
  */
 
 // CREA LA DIMENZIONE DEL CAMPO
+
+var numerocelle = [];
+
 function creaCampo(nCelle) {
     for (var i = 1; i <= nCelle; i++) {
     document.getElementById("container").innerHTML += `<div class="quadrato">${i}</div>`;
@@ -42,6 +45,8 @@ creaCampo(sceltaUtente);
 
 // genera bombe random sul campo 
 
+var bombe = [];
+
 for (var i = 0; i < 16; i++) {
     var numeriBombe = (numeroRandom(1, sceltaUtente));
     var check = bombe.includes(numeriBombe);
@@ -61,7 +66,7 @@ for (var i = 0; i < 16; i++) {
 }
 
 
-var numerocelle = [];
+
 
 var classeQuadrato = document.getElementsByClassName("quadrato");
 
