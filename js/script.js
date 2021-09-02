@@ -82,8 +82,11 @@ for (var i = 0; i <= 100; i++) {
 
 var celleCliccate = 0;
 
+var vittoria = 0
+
 document.getElementById("container").addEventListener("click", 
     function (event) {
+        
         if (event.target.classList.contains("bomba")){
             event.target.classList.add("boom")
             alert(`BOOM! HAI PERSO! Il tuo punteggio: ${celleCliccate} punti` );
@@ -91,12 +94,17 @@ document.getElementById("container").addEventListener("click",
             alert("CHICCO CHAI GIÁ PREMUTO !");
         } else {
             event.target.classList.add("rosso");
-            alert(event.target.innerHTML);
+            //alert(event.target.innerHTML);
             celleCliccate += 1;
-            console.log(celleCliccate)
+            
+            if(celleCliccate == vittoria) {
+                alert("HAI VINTO!")
+            }
         }
     }
 );
+
+
 
 
 
