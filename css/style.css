@@ -16,9 +16,32 @@
     height: 100px;
     background-color: green;
     border: 1px solid black;
+    position: relative;
 }
 
 .rosso {
     background-color: red;
+}
+
+.bomba {
+    width: 100px;
+    height: 100px;
+}
+
+.boom {
+    background-color: white;
+    
+}
+
+.boom::before {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f1e2";
+    font-size: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
     
