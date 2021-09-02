@@ -43,7 +43,7 @@ creaCampo(sceltaUtente);
 // genera bombe random sul campo 
 
 for (var i = 0; i < 16; i++) {
-    var numeriBombe = (numeroRandom(1, 100));
+    var numeriBombe = (numeroRandom(1, sceltaUtente));
     var check = bombe.includes(numeriBombe);
 
     if (check == false) {
@@ -51,7 +51,7 @@ for (var i = 0; i < 16; i++) {
 
     } else {
         while(check == true){
-            numeriBombe = (numeroRandom(1, 100));
+            numeriBombe = (numeroRandom(1, sceltaUtente));
             check = bombe.includes(numeriBombe);
             if(check == false){
                 bombe.push(numeriBombe);
@@ -66,7 +66,7 @@ var numerocelle = [];
 var classeQuadrato = document.getElementsByClassName("quadrato");
 
 
-for (var i = 0; i <= 100; i++) {
+for (var i = 0; i <= sceltaUtente; i++) {
     if (bombe.includes(numerocelle[i])) {
         classeQuadrato[i].classList.add("bomba");
     }
