@@ -80,35 +80,25 @@ for (var i = 0; i <= 100; i++) {
 //In seguito il giocatore clicca sulle celle numerate (non può cliccare più volte sulla stessa cella)
 //Al click su una cella dovrà essere mostrato con un alert il numero della cella e il suo background diventerà rosso.
 
+var celleCliccate = 0;
 
 document.getElementById("container").addEventListener("click", 
     function (event) {
         if (event.target.classList.contains("bomba")){
             event.target.classList.add("boom")
-            alert("BOOM! HAI PERSO!");
+            alert(`BOOM! HAI PERSO! Il tuo punteggio: ${celleCliccate} punti` );
         } else if (event.target.classList.contains("rosso")) {
             alert("CHICCO CHAI GIÁ PREMUTO !");
         } else {
             event.target.classList.add("rosso");
             alert(event.target.innerHTML);
+            celleCliccate += 1;
+            console.log(celleCliccate)
         }
     }
 );
 
 
-//} else if (event.target.classList.contains("rosso") {
-//    alert("BOOM! HAI PERSO!");
-//} else {
-//    event.target.classList.add("rosso");
-//    alert(event.target.innerHTML);
-//}
-
-//document.getElementById("container").addEventListener("click", 
-//    function (event) {
-//        event.target.classList.contains("rosso");
-//        alert("CHICCO CHAI GIÁ PREMUTO !");
-//    }
-//);
 
 
 
