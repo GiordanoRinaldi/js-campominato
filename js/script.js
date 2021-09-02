@@ -90,6 +90,7 @@ document.getElementById("container").addEventListener("click",
         if (event.target.classList.contains("bomba")){
             event.target.classList.add("boom")
             alert(`BOOM! HAI PERSO! Il tuo punteggio: ${celleCliccate} punti` );
+            location.reload();
         } else if (event.target.classList.contains("rosso")) {
             alert("CHICCO CHAI GIÁ PREMUTO !");
         } else {
